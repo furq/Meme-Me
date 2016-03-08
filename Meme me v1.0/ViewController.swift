@@ -20,6 +20,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   @IBOutlet weak var toolBar: UIToolbar!
   @IBOutlet weak var shareBtn: UIBarButtonItem!
 
+  var meme: Meme!
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setInitials()
@@ -68,7 +70,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   }
 
   func keyboardWillShow(notification: NSNotification) {
-    self.view.frame.origin.y -= getKeyboardHeight(notification)
+    if bottomTextField.isFirstResponder()
+    {
+      view.frame.origin.y = -getKeyboardHeight(notification)
+    }
   }
 
   func keyboardWillHide(notification: NSNotification) {
@@ -104,7 +109,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
   /*Function that allow user to dismiss keyboard when touches anywhere on the view*/
   override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-    self.view.endEditing(true)
+    view.endEditing(true)
   }
 
   /*Function to pass the selected image to the imageViewController*/
@@ -143,7 +148,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // render view to an image
     UIGraphicsBeginImageContext(self.view.frame.size)
-    self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+    view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
     let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
 
@@ -157,7 +162,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //Create the meme
     let memedImage = generateMemedImage()
 
-    var meme = Meme(topText: topTextFiled.text!, bottomText: bottomTextField.text!, withImage: imagePickerView.image!, withMemedImage: memedImage)
+    meme = Meme(topText: topTextFiled.text!, bottomText: bottomTextField.text!, image: imagePickerView.image!, memedImage: memedImage)
   }
 
   @IBAction func shareAction(sender: AnyObject) {
@@ -181,7 +186,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   /* Reset everything on Cancel Action*/
   @IBAction func CancelAction(sender: AnyObject) {
     //if keyboard is open and user tap cancel
-    self.view.endEditing(true)
+    view.endEditing(true)
     setInitials()
     imagePickerView.image = nil
     shareBtn.enabled = false
