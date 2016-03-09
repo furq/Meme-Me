@@ -70,8 +70,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   }
 
   func keyboardWillShow(notification: NSNotification) {
-    if bottomTextField.isFirstResponder()
-    {
+    if bottomTextField.isFirstResponder() {
       view.frame.origin.y = -getKeyboardHeight(notification)
     }
   }
@@ -122,16 +121,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
   /* Action to call on Album click*/
   @IBAction func pickAnImage(sender: AnyObject) {
-    let pickerController = UIImagePickerController()
-    pickerController.delegate = self
-    pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-    presentViewController(pickerController, animated: true, completion: nil)
+     getAnImage(UIImagePickerControllerSourceType.PhotoLibrary)
   }
 
   /* Action to call on camera click */
   @IBAction func pickCameraImage(sender: AnyObject) {
+    getAnImage(UIImagePickerControllerSourceType.Camera)
+  }
+
+
+  func getAnImage(sourcetype:UIImagePickerControllerSourceType  ) {
     let pickerController = UIImagePickerController()
     pickerController.delegate = self
+    pickerController.sourceType = sourcetype
     presentViewController(pickerController, animated: true, completion: nil)
   }
 
