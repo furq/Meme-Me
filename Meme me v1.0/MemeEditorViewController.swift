@@ -164,7 +164,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     //Create the meme
     let memedImage = generateMemedImage()
 
-    meme = Meme(topText: topTextFiled.text!, bottomText: bottomTextField.text!, image: imagePickerView.image!, memedImage: memedImage)
+    let meme = Meme(topText: topTextFiled.text!, bottomText: bottomTextField.text!, image: imagePickerView.image!, memedImage: memedImage)
+
+    let object = UIApplication.sharedApplication().delegate
+    let appDelegate = object as! AppDelegate
+    appDelegate.memes.append(meme)
   }
 
   @IBAction func shareAction(sender: AnyObject) {
@@ -185,15 +189,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     presentViewController(activityViewController, animated: true, completion: nil)
   }
 
-  /* Reset everything on Cancel Action*/
+  /* call initial TabView on Cancel Action*/
   @IBAction func CancelAction(sender: AnyObject) {
     //if keyboard is open and user tap cancel
-    view.endEditing(true)
-    setInitials()
-    imagePickerView.image = nil
-    shareBtn.enabled = false
+    presentSentMemeController()
   }
-  
-  
+
+  func presentSentMemeController() {
+    let tabController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeController") as! UITabBarController
+    self.presentViewController(tabController, animated: true, completion: nil)
+  }
+
+
 }
 

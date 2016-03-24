@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75384A231CA27FF800EA603C /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75384A221CA27FF800EA603C /* MemeTableViewCell.swift */; };
+		757E30571CA3B6AE008C0E3C /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E30561CA3B6AE008C0E3C /* MemeCollectionViewCell.swift */; };
+		75AB4B141CA23C380011F4F5 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AB4B131CA23C380011F4F5 /* MemeTableViewController.swift */; };
+		75AB4B161CA23C4E0011F4F5 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AB4B151CA23C4E0011F4F5 /* MemeCollectionViewController.swift */; };
 		75C3B8D41C841A6B00C19709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3B8D31C841A6B00C19709 /* AppDelegate.swift */; };
 		75C3B8D61C841A6B00C19709 /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3B8D51C841A6B00C19709 /* MemeEditorViewController.swift */; };
 		75C3B8D91C841A6B00C19709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C3B8D71C841A6B00C19709 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75384A221CA27FF800EA603C /* MemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		757E30561CA3B6AE008C0E3C /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		75AB4B131CA23C380011F4F5 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		75AB4B151CA23C4E0011F4F5 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
 		75C3B8D01C841A6B00C19709 /* Meme me v1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme me v1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C3B8D31C841A6B00C19709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C3B8D51C841A6B00C19709 /* MemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				75C3B8DC1C841A6B00C19709 /* LaunchScreen.storyboard */,
 				75C3B8DF1C841A6B00C19709 /* Info.plist */,
 				75C3B8E81C8E8C3700C19709 /* Meme.swift */,
+				75AB4B131CA23C380011F4F5 /* MemeTableViewController.swift */,
+				75AB4B151CA23C4E0011F4F5 /* MemeCollectionViewController.swift */,
+				75384A221CA27FF800EA603C /* MemeTableViewCell.swift */,
+				757E30561CA3B6AE008C0E3C /* MemeCollectionViewCell.swift */,
 			);
 			path = "Meme me v1.0";
 			sourceTree = "<group>";
@@ -140,7 +152,11 @@
 			files = (
 				75C3B8E91C8E8C3700C19709 /* Meme.swift in Sources */,
 				75C3B8D61C841A6B00C19709 /* MemeEditorViewController.swift in Sources */,
+				75AB4B161CA23C4E0011F4F5 /* MemeCollectionViewController.swift in Sources */,
+				75384A231CA27FF800EA603C /* MemeTableViewCell.swift in Sources */,
+				757E30571CA3B6AE008C0E3C /* MemeCollectionViewCell.swift in Sources */,
 				75C3B8D41C841A6B00C19709 /* AppDelegate.swift in Sources */,
+				75AB4B141CA23C380011F4F5 /* MemeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Meme me v1.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.furqan.Meme-me-v1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -263,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Meme me v1.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.furqan.Meme-me-v1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
