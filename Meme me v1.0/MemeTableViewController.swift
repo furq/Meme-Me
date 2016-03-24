@@ -23,6 +23,10 @@ class MemeTableViewController: UITableViewController {
 
   }
 
+  override func viewDidAppear(animated: Bool) {
+    tableView.reloadData()
+  }
+
   /* Number of rows to be displayed */
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
