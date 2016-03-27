@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7526D6721CA5138100CCF5D5 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7526D6711CA5138100CCF5D5 /* MemeDetailViewController.swift */; };
 		75384A231CA27FF800EA603C /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75384A221CA27FF800EA603C /* MemeTableViewCell.swift */; };
 		757E30571CA3B6AE008C0E3C /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E30561CA3B6AE008C0E3C /* MemeCollectionViewCell.swift */; };
 		75AB4B141CA23C380011F4F5 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AB4B131CA23C380011F4F5 /* MemeTableViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7526D6711CA5138100CCF5D5 /* MemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 		75384A221CA27FF800EA603C /* MemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
 		757E30561CA3B6AE008C0E3C /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		75AB4B131CA23C380011F4F5 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				75AB4B151CA23C4E0011F4F5 /* MemeCollectionViewController.swift */,
 				75384A221CA27FF800EA603C /* MemeTableViewCell.swift */,
 				757E30561CA3B6AE008C0E3C /* MemeCollectionViewCell.swift */,
+				7526D6711CA5138100CCF5D5 /* MemeDetailViewController.swift */,
 			);
 			path = "Meme me v1.0";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C3B8E91C8E8C3700C19709 /* Meme.swift in Sources */,
+				7526D6721CA5138100CCF5D5 /* MemeDetailViewController.swift in Sources */,
 				75C3B8D61C841A6B00C19709 /* MemeEditorViewController.swift in Sources */,
 				75AB4B161CA23C4E0011F4F5 /* MemeCollectionViewController.swift in Sources */,
 				75384A231CA27FF800EA603C /* MemeTableViewCell.swift in Sources */,
@@ -270,7 +274,7 @@
 				INFOPLIST_FILE = "Meme me v1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.furqan.Meme-me-v1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.furqan.Meme-me-v2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -282,7 +286,7 @@
 				INFOPLIST_FILE = "Meme me v1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.furqan.Meme-me-v1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.furqan.Meme-me-v2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

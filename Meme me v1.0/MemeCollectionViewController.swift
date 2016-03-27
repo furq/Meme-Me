@@ -17,9 +17,9 @@ class MemeCollectionViewController: UICollectionViewController {
 
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(true)
-
     memes = appDelegate.memes
     collectionView?.reloadData()
+
   }
 
   override func viewDidLoad() {
@@ -43,15 +43,20 @@ class MemeCollectionViewController: UICollectionViewController {
     // retrieve the corresponding meme
     let meme = memes[indexPath.item]
     cell.memeImageView?.image = meme.memedImage
-    cell.labelTop?.text       = meme.topText
-    cell.labelBottom?.text    = meme.bottomText
-
     return cell
   }
+
+  override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+    let memeDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+    memeDetailVC.detailMeme = memes[indexPath.row]
+    navigationController!.pushViewController(memeDetailVC, animated: true)
+  }
+
 
   @IBAction func addNewMeme(sender: AnyObject) {
     let memeEditorVC = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
     presentViewController(memeEditorVC, animated: true, completion: nil)
   }
-
+  
 }

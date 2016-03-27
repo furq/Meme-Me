@@ -41,7 +41,7 @@ class MemeTableViewController: UITableViewController {
     let meme = memes[indexPath.row]
 
     cell.imageView?.image = meme.memedImage
-    cell.textLabel?.text = "\(meme.topText) -- \(meme.bottomText)"
+    cell.textLabel?.text = "\(meme.topText) .. \(meme.bottomText)"
 
     return cell
 
@@ -50,6 +50,14 @@ class MemeTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     return true
   }
+
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    let memeDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+    memeDetailVC.detailMeme = memes[indexPath.row]
+    navigationController!.pushViewController(memeDetailVC, animated: true)
+  }
+
 
   @IBAction func addNewMeme(sender: AnyObject) {
     let memeEditorVC = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController

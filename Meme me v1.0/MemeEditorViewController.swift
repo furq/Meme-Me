@@ -121,7 +121,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
   /* Action to call on Album click*/
   @IBAction func pickAnImage(sender: AnyObject) {
-     getAnImage(UIImagePickerControllerSourceType.PhotoLibrary)
+    getAnImage(UIImagePickerControllerSourceType.PhotoLibrary)
   }
 
   /* Action to call on camera click */
@@ -199,7 +199,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     let tabController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeController") as! UITabBarController
     self.presentViewController(tabController, animated: true, completion: nil)
   }
-
-
+  
+  
 }
 
